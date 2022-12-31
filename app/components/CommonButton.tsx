@@ -1,4 +1,5 @@
-import Button, { ButtonProps } from '@mui/material/Button';
+'use client';
+import Button from '@mui/material/Button';
 import { ReactNode } from 'react';
 
 interface CommonButtonProps {
