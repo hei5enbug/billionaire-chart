@@ -1,12 +1,12 @@
 'use client';
-import FlexBox from './components/FlexBox';
+import FlexBox from '../components/FlexBox';
 
 export default function Home() {
   return (
     <FlexBox
       sx={{
+        height: '100%',
         backgroundColor: 'primary.main',
-        border: 'solid 1px grey',
       }}
     >
       Main

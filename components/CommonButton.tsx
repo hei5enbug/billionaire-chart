@@ -1,4 +1,3 @@
-'use client';
 import Button from '@mui/material/Button';
 import { ReactNode } from 'react';
 

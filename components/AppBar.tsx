@@ -1,4 +1,3 @@
-'use client';
 import FlexBox from './FlexBox';
 
 export default function AppBar() {
