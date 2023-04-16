@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+html,
+body,
+#__next,
+main {
+  height: 100%;
+  overflow-y: hidden;
+}
+
+main {
+  background-color: #2a2e39;
+}
