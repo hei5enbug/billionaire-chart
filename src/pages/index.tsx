@@ -2,6 +2,8 @@ import { ReactElement } from 'react';
 import { NextPageWithLayout } from './_app';
 import FlexBox from '@/components/FlexBox';
 import TopBar from '@/components/TopBar';
+import SymbolList from '@/components/SymbolList';
+import { Typography } from '@mui/material';
 
 const Page: NextPageWithLayout = () => {
   return (
@@ -12,7 +14,7 @@ const Page: NextPageWithLayout = () => {
         backgroundColor: 'primary.main',
       }}
     >
-      Main
+      <Typography>Main</Typography>
     </FlexBox>
   );
 };
