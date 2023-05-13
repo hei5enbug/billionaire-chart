@@ -1,13 +1,13 @@
-import { ReactElement, ReactNode, useState } from 'react';
+import createEmotionCache from '@/createEmotionCache';
+import '@/styles/globals.css';
+import theme from '@/styles/theme';
+import { CacheProvider, EmotionCache } from '@emotion/react';
+import CssBaseline from '@mui/material/CssBaseline';
+import { ThemeProvider } from '@mui/material/styles';
 import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import { ThemeProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
-import { CacheProvider, EmotionCache } from '@emotion/react';
-import createEmotionCache from '@/createEmotionCache';
-import theme from '@/styles/theme';
-import '@/styles/globals.css';
+import { ReactElement, ReactNode, useState } from 'react';
 import { Hydrate, QueryClient, QueryClientProvider } from 'react-query';
 
 export type AppPropsWithLayout = AppProps & {

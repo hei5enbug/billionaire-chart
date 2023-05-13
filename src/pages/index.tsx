@@ -1,20 +1,20 @@
-import { ReactElement } from 'react';
-import { NextPageWithLayout } from './_app';
 import FlexBox from '@/components/FlexBox';
 import TopBar from '@/components/TopBar';
-import SymbolList from '@/components/SymbolList';
-import { Typography } from '@mui/material';
+import MainChart from '@/components/chart/MainChart';
+import { ReactElement } from 'react';
+import { NextPageWithLayout } from './_app';
 
 const Page: NextPageWithLayout = () => {
   return (
     <FlexBox
       sx={{
-        height: '100%',
+        flexDirection: 'row',
+        height: 'calc(100% - 60px)',
         overflowY: 'hidden',
         backgroundColor: 'primary.main',
       }}
     >
-      <Typography>Main</Typography>
+      <MainChart />
     </FlexBox>
   );
 };

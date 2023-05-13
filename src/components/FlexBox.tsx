@@ -8,7 +8,7 @@ interface FlexBoxProps {
 
 export default function FlexBox({ sx, children }: FlexBoxProps) {
   return (
-    <Box sx={sx} display="flex" flexDirection="column" justifyContent="center" alignItems="center">
+    <Box sx={sx} display="flex" justifyContent="center" alignItems="center">
       {children}
     </Box>
   );

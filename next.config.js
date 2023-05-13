@@ -9,8 +9,13 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: '/:path*',
-        destination: 'https://api.billionaire.codes/:path*',
+        source: '/symbol',
+        destination: 'https://api.billionaire.codes/symbol',
+      },
+      {
+        source: '/candle/BTCUSDT',
+        destination: 'https://api.billionaire.codes/candle/BTCUSDT',
+        // destination: 'https://api.binance.com/api/v3/ping',
       },
     ];
   },
