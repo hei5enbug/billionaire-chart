@@ -2,7 +2,7 @@ import { Box, SxProps } from '@mui/material';
 import { ReactNode } from 'react';
 
 interface FlexBoxProps {
-  sx: SxProps;
+  sx?: SxProps;
   children: ReactNode;
 }
 

@@ -1,28 +1,50 @@
-import { FormControl, MenuItem, Select, SelectChangeEvent } from '@mui/material';
+import { Button } from '@mui/material';
 import { useState } from 'react';
 import FlexBox from './FlexBox';
-import React from 'react';
+import SymbolDialog from './dialog/SymbolDialog';
 
 export default function TopBar() {
-  const [symbol, setSymbol] = useState('BTCUSDT');
+  const [open, setOpen] = useState(false);
 
-  const handleChange = (event: SelectChangeEvent) => {
-    setSymbol(event.target.value as string);
+  const handleOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
   };
 
   return (
-    <FlexBox
-      sx={{
-        backgroundColor: 'primary.main',
-        marginBottom: 1,
-      }}
-    >
-      <FormControl fullWidth>
-        <Select value={symbol} defaultValue="10" onChange={handleChange}>
-          <MenuItem value="BTCUSDT">BTCUSDT</MenuItem>
-          <MenuItem value="ETHUSDT">ETHUSDT</MenuItem>
-        </Select>
-      </FormControl>
-    </FlexBox>
+    <>
+      <SymbolDialog open={open} onClose={handleClose} />
+      <FlexBox
+        sx={{
+          flexDirection: 'row',
+          justifyContent: 'start',
+          height: '50px',
+          backgroundColor: 'primary.main',
+          marginBottom: 1,
+          paddingX: '1rem',
+          paddingY: '0.3rem',
+        }}
+      >
+        <Button
+          sx={{
+            height: '100%',
+            color: '#2962FF',
+            fontSize: '15px',
+            fontWeight: 800,
+            '&:hover': {
+              backgroundColor: '#242628',
+              // borderColor: '#0062cc',
+              boxShadow: 'none',
+            },
+          }}
+          onClick={handleOpen}
+        >
+          {/* {symbol} */}
+          BTCUSDT
+        </Button>
+      </FlexBox>
+    </>
   );
 }
