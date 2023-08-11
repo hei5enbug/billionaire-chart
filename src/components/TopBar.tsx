@@ -1,7 +1,7 @@
 import { Button } from '@mui/material';
 import { useState } from 'react';
 import FlexBox from './FlexBox';
-import SymbolDialog from './dialog/SymbolDialog';
+import SymbolDialog from './symbol/SymbolDialog';
 
 export default function TopBar() {
   const [open, setOpen] = useState(false);
