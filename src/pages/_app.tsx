@@ -9,6 +9,7 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { ReactElement, ReactNode, useState } from 'react';
 import { Hydrate, QueryClient, QueryClientProvider } from 'react-query';
+import { RecoilRoot } from 'recoil';
 
 export type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;
@@ -29,16 +30,18 @@ export default function App(props: AppPropsWithLayout) {
   return (
     <QueryClientProvider client={queryClient}>
       <Hydrate state={pageProps.dehydreatedState}>
-        <CacheProvider value={emotionCache}>
-          <Head>
-            <title>Billionaire</title>
-            <meta name="viewport" content="initial-scale=1, width=device-width" />
-          </Head>
-          <ThemeProvider theme={theme}>
-            <CssBaseline />
-            {getLayout(<Component {...pageProps} />)}
-          </ThemeProvider>
-        </CacheProvider>
+        <RecoilRoot>
+          <CacheProvider value={emotionCache}>
+            <Head>
+              <title>Billionaire</title>
+              <meta name="viewport" content="initial-scale=1, width=device-width" />
+            </Head>
+            <ThemeProvider theme={theme}>
+              <CssBaseline />
+              {getLayout(<Component {...pageProps} />)}
+            </ThemeProvider>
+          </CacheProvider>
+        </RecoilRoot>
       </Hydrate>
     </QueryClientProvider>
   );

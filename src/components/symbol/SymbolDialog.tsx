@@ -13,7 +13,7 @@ interface ISymbolDialogProps {
 }
 
 export default function SymbolDialog({ open, onClose }: ISymbolDialogProps) {
-  const [search, setSearch] = useState('BTCUSDT');
+  const [search, setSearch] = useState('');
   const { data, isLoading } = useQuery<string[]>(['getSymbols'], getSymbols);
 
   const handleChangeSearch = (event: ChangeEvent<HTMLInputElement>) => {

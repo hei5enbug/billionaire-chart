@@ -1,21 +1,24 @@
 import { Button } from '@mui/material';
-import { useState } from 'react';
 import FlexBox from './FlexBox';
 import SymbolDialog from './symbol/SymbolDialog';
+import { symbolDialogState, symbolState } from '@/recoil/symbol/atoms';
+import { useRecoilState } from 'recoil';
+import TimeFrameList from './timeframe/TimeFrameList';
 
 export default function TopBar() {
-  const [open, setOpen] = useState(false);
+  const [symbol] = useRecoilState(symbolState);
+  const [symbolDialogOpen, setSymbolDialogOpen] = useRecoilState(symbolDialogState);
 
   const handleOpen = () => {
-    setOpen(true);
+    setSymbolDialogOpen(true);
   };
   const handleClose = () => {
-    setOpen(false);
+    setSymbolDialogOpen(false);
   };
 
   return (
     <>
-      <SymbolDialog open={open} onClose={handleClose} />
+      <SymbolDialog open={symbolDialogOpen} onClose={handleClose} />
       <FlexBox
         sx={{
           flexDirection: 'row',
@@ -35,15 +38,16 @@ export default function TopBar() {
             fontWeight: 800,
             '&:hover': {
               backgroundColor: '#242628',
-              // borderColor: '#0062cc',
               boxShadow: 'none',
             },
+            marginRight: '1.5rem',
           }}
           onClick={handleOpen}
         >
-          {/* {symbol} */}
-          BTCUSDT
+          {symbol}
         </Button>
+
+        <TimeFrameList />
       </FlexBox>
     </>
   );

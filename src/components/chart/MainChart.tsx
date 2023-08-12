@@ -1,13 +1,19 @@
-import { getCandles } from '@/api/candles';
 import { StockConfig } from '@ant-design/plots';
 import { Box } from '@mui/material';
 import dayjs from 'dayjs';
 import dynamic from 'next/dynamic';
 import { useQuery } from 'react-query';
 import { ICandleInfo } from '../../interface/candle';
+import { getCandles } from '@/api/candles';
+import { useRecoilState } from 'recoil';
+import { intervalState } from '@/recoil/interval/atoms';
 
 export default function MainChart() {
-  const { data, isLoading } = useQuery<Array<any[]>>(['getCandles'], getCandles);
+  const [interval] = useRecoilState(intervalState);
+  const { data, isLoading } = useQuery<Array<any[]>>(
+    ['getCandles', 'BTCUSDT', interval],
+    getCandles
+  );
 
   if (isLoading) return <div>Loading...</div>;
   if (!data) return <div>No Data!</div>;
