@@ -5,7 +5,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  
+  transpilePackages: ['lightweight-charts'],
+
   async rewrites() {
     return [
       {
@@ -22,3 +23,4 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
+

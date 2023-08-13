@@ -46,6 +46,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-config-next", "virtual:26bd2fd2ac2e022ac1e07954acee23736420bf6fc8a5c6026e39dd47ac2462ea653b8a0a8a2bb78cbb12c79ccd661d90cd14c1f955d2db8afbe8163e7b134d20#npm:13.3.0"],\
             ["eslint-plugin-unused-imports", "virtual:26bd2fd2ac2e022ac1e07954acee23736420bf6fc8a5c6026e39dd47ac2462ea653b8a0a8a2bb78cbb12c79ccd661d90cd14c1f955d2db8afbe8163e7b134d20#npm:2.0.0"],\
             ["husky", "npm:8.0.2"],\
+            ["lightweight-charts", "npm:4.0.1"],\
             ["lint-staged", "npm:13.1.0"],\
             ["next", "virtual:26bd2fd2ac2e022ac1e07954acee23736420bf6fc8a5c6026e39dd47ac2462ea653b8a0a8a2bb78cbb12c79ccd661d90cd14c1f955d2db8afbe8163e7b134d20#npm:13.3.0"],\
             ["prettier", "npm:2.8.1"],\
@@ -1959,6 +1960,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-config-next", "virtual:26bd2fd2ac2e022ac1e07954acee23736420bf6fc8a5c6026e39dd47ac2462ea653b8a0a8a2bb78cbb12c79ccd661d90cd14c1f955d2db8afbe8163e7b134d20#npm:13.3.0"],\
             ["eslint-plugin-unused-imports", "virtual:26bd2fd2ac2e022ac1e07954acee23736420bf6fc8a5c6026e39dd47ac2462ea653b8a0a8a2bb78cbb12c79ccd661d90cd14c1f955d2db8afbe8163e7b134d20#npm:2.0.0"],\
             ["husky", "npm:8.0.2"],\
+            ["lightweight-charts", "npm:4.0.1"],\
             ["lint-staged", "npm:13.1.0"],\
             ["next", "virtual:26bd2fd2ac2e022ac1e07954acee23736420bf6fc8a5c6026e39dd47ac2462ea653b8a0a8a2bb78cbb12c79ccd661d90cd14c1f955d2db8afbe8163e7b134d20#npm:13.3.0"],\
             ["prettier", "npm:2.8.1"],\
@@ -3322,6 +3324,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["fancy-canvas", [\
+        ["npm:2.1.0", {\
+          "packageLocation": "./.yarn/cache/fancy-canvas-npm-2.1.0-22df58fc44-2463ca8a92.zip/node_modules/fancy-canvas/",\
+          "packageDependencies": [\
+            ["fancy-canvas", "npm:2.1.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["fast-deep-equal", [\
         ["npm:3.1.3", {\
           "packageLocation": "./.yarn/cache/fast-deep-equal-npm-3.1.3-790edcfcf5-e21a9d8d84.zip/node_modules/fast-deep-equal/",\
@@ -4412,6 +4423,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["levn", "npm:0.4.1"],\
             ["prelude-ls", "npm:1.2.1"],\
             ["type-check", "npm:0.4.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["lightweight-charts", [\
+        ["npm:4.0.1", {\
+          "packageLocation": "./.yarn/cache/lightweight-charts-npm-4.0.1-eacdb70335-772183cb4d.zip/node_modules/lightweight-charts/",\
+          "packageDependencies": [\
+            ["lightweight-charts", "npm:4.0.1"],\
+            ["fancy-canvas", "npm:2.1.0"]\
           ],\
           "linkType": "HARD"\
         }]\
