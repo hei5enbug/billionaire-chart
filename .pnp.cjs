@@ -41,7 +41,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-dom", "npm:18.0.11"],\
             ["@yarnpkg/sdks", "npm:3.0.0-rc.42"],\
             ["axios", "npm:1.3.5"],\
-            ["dayjs", "npm:1.11.7"],\
+            ["dayjs", "npm:1.11.9"],\
             ["eslint", "npm:8.38.0"],\
             ["eslint-config-next", "virtual:26bd2fd2ac2e022ac1e07954acee23736420bf6fc8a5c6026e39dd47ac2462ea653b8a0a8a2bb78cbb12c79ccd661d90cd14c1f955d2db8afbe8163e7b134d20#npm:13.3.0"],\
             ["eslint-plugin-unused-imports", "virtual:26bd2fd2ac2e022ac1e07954acee23736420bf6fc8a5c6026e39dd47ac2462ea653b8a0a8a2bb78cbb12c79ccd661d90cd14c1f955d2db8afbe8163e7b134d20#npm:2.0.0"],\
@@ -1955,7 +1955,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-dom", "npm:18.0.11"],\
             ["@yarnpkg/sdks", "npm:3.0.0-rc.42"],\
             ["axios", "npm:1.3.5"],\
-            ["dayjs", "npm:1.11.7"],\
+            ["dayjs", "npm:1.11.9"],\
             ["eslint", "npm:8.38.0"],\
             ["eslint-config-next", "virtual:26bd2fd2ac2e022ac1e07954acee23736420bf6fc8a5c6026e39dd47ac2462ea653b8a0a8a2bb78cbb12c79ccd661d90cd14c1f955d2db8afbe8163e7b134d20#npm:13.3.0"],\
             ["eslint-plugin-unused-imports", "virtual:26bd2fd2ac2e022ac1e07954acee23736420bf6fc8a5c6026e39dd47ac2462ea653b8a0a8a2bb78cbb12c79ccd661d90cd14c1f955d2db8afbe8163e7b134d20#npm:2.0.0"],\
@@ -2498,10 +2498,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["dayjs", [\
-        ["npm:1.11.7", {\
-          "packageLocation": "./.yarn/cache/dayjs-npm-1.11.7-d5cd5b2919-5003a7c1dd.zip/node_modules/dayjs/",\
+        ["npm:1.11.9", {\
+          "packageLocation": "./.yarn/cache/dayjs-npm-1.11.9-c47d327b7c-a4844d83dc.zip/node_modules/dayjs/",\
           "packageDependencies": [\
-            ["dayjs", "npm:1.11.7"]\
+            ["dayjs", "npm:1.11.9"]\
           ],\
           "linkType": "HARD"\
         }]\

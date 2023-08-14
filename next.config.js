@@ -5,7 +5,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  transpilePackages: ['lightweight-charts'],
+  transpilePackages: ['dayjs', 'lightweight-charts'],
 
   async rewrites() {
     return [

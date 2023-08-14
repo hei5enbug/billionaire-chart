@@ -1,4 +1,4 @@
-import { Button } from '@mui/material';
+import { Button, useTheme } from '@mui/material';
 import FlexBox from './FlexBox';
 import SymbolDialog from './symbol/SymbolDialog';
 import { symbolDialogState, symbolState } from '@/recoil/symbol/atoms';
@@ -8,6 +8,7 @@ import TimeFrameList from './timeframe/TimeFrameList';
 export default function TopBar() {
   const [symbol] = useRecoilState(symbolState);
   const [symbolDialogOpen, setSymbolDialogOpen] = useRecoilState(symbolDialogState);
+  const theme = useTheme();
 
   const handleOpen = () => {
     setSymbolDialogOpen(true);
@@ -24,7 +25,7 @@ export default function TopBar() {
           flexDirection: 'row',
           justifyContent: 'start',
           height: '50px',
-          backgroundColor: 'primary.main',
+          backgroundColor: theme.main.background,
           marginBottom: 1,
           paddingX: '1rem',
           paddingY: '0.3rem',
@@ -33,11 +34,11 @@ export default function TopBar() {
         <Button
           sx={{
             height: '100%',
-            color: '#2962FF',
+            color: theme.main.topbar.symbol,
             fontSize: '15px',
             fontWeight: 800,
             '&:hover': {
-              backgroundColor: '#242628',
+              backgroundColor: theme.main.topbar.hover,
               boxShadow: 'none',
             },
             marginRight: '1.5rem',

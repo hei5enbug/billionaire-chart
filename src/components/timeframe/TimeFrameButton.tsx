@@ -1,5 +1,5 @@
 import { intervalState } from '@/recoil/interval/atoms';
-import { Button } from '@mui/material';
+import { Button, useTheme } from '@mui/material';
 import { ReactNode } from 'react';
 import { useRecoilState } from 'recoil';
 
@@ -9,6 +9,7 @@ interface ITimeFrameButtonProps {
 
 export default function TimeFrameButton({ children }: ITimeFrameButtonProps) {
   const [interval, setInterval] = useRecoilState(intervalState);
+  const theme = useTheme();
 
   const handleClick = () => {
     setInterval(children ? children.toString() : '');
@@ -21,13 +22,13 @@ export default function TimeFrameButton({ children }: ITimeFrameButtonProps) {
       sx={{
         minWidth: '3rem',
         height: '100%',
-        color: isSelected ? 'yellow' : '#999999',
+        color: isSelected ? theme.main.topbar.interval.selected : theme.main.topbar.interval.display,
         fontSize: '15px',
         fontWeight: 800,
         padding: 0,
         textTransform: 'none',
         '&:hover': {
-          backgroundColor: '#242628',
+          backgroundColor: theme.main.topbar.hover,
           boxShadow: 'none',
         },
       }}

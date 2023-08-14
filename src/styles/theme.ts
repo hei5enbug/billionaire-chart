@@ -1,6 +1,31 @@
-import { red } from '@mui/material/colors';
+/* eslint-disable no-unused-vars */
 import { createTheme } from '@mui/material/styles';
 import { Roboto } from 'next/font/google';
+
+declare module '@mui/material/styles' {
+  interface IThemeDetail {
+    main: {
+      background: string;
+      chart: {
+        background: string;
+        grid: string;
+        text: string;
+      };
+      topbar: {
+        symbol: string;
+        interval: {
+          display: string;
+          selected: string;
+        };
+        hover: string;
+      };
+    };
+  }
+
+  interface Theme extends IThemeDetail {}
+
+  interface ThemeOptions extends IThemeDetail {}
+}
 
 export const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
@@ -9,23 +34,21 @@ export const roboto = Roboto({
   fallback: ['Helvetica', 'Arial', 'sans-serif'],
 });
 
-const theme = createTheme({
-  palette: {
-    mode: 'dark',
-    primary: {
-      main: '#131722',
+export const darkTheme = createTheme({
+  main: {
+    background: '#131722',
+    chart: {
+      background: '#131722',
+      grid: '#333333',
+      text: '#EEEEEE',
     },
-    secondary: {
-      main: '#19857b',
-    },
-    error: {
-      main: red.A400,
-    },
-    text: {
-      primary: '#d1d4dc',
-    },
-    background: {
-      default: 'grey',
+    topbar: {
+      symbol: '#2962FF',
+      interval: {
+        display: '#999999',
+        selected: '#DDDD00',
+      },
+      hover: '#242628',
     },
   },
   typography: {
@@ -33,4 +56,26 @@ const theme = createTheme({
   },
 });
 
-export default theme;
+export const lightTheme = createTheme({
+  main: {
+    background: '#EEEEEE',
+    chart: {
+      background: '#EEEEEE',
+      grid: '#333333',
+      text: '#000000',
+    },
+    topbar: {
+      symbol: '#2962FF',
+      interval: {
+        display: '#999999',
+        selected: '#009999',
+      },
+      hover: '#DDDDAA',
+    },
+  },
+  typography: {
+    fontFamily: roboto.style.fontFamily,
+  },
+});
+
+export default darkTheme;

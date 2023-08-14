@@ -1,5 +1,5 @@
 import { symbolDialogState, symbolState } from '@/recoil/symbol/atoms';
-import { Divider, List, ListItemButton, Typography } from '@mui/material';
+import { Box, Divider, List, ListItemButton, Typography } from '@mui/material';
 import { useRecoilState } from 'recoil';
 
 interface ISymbolListProps {
@@ -18,9 +18,8 @@ export default function SymbolList({ symbols }: ISymbolListProps) {
   return (
     <List sx={{ maxHeight: 'calc(100% - 50px)', overflow: 'auto', padding: 0 }}>
       {symbols.map((symbolName, index) => (
-        <>
+        <Box key={`symbol-list-${index}`}>
           <ListItemButton
-            key={`symbol-list-${index}`}
             sx={{ padding: '0.5rem 3rem' }}
             onClick={() => {
               handleClick(symbolName);
@@ -29,7 +28,7 @@ export default function SymbolList({ symbols }: ISymbolListProps) {
             <Typography>{symbolName}</Typography>
           </ListItemButton>
           <Divider />
-        </>
+        </Box>
       ))}
     </List>
   );
